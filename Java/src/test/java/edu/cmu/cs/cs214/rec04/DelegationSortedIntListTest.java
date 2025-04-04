@@ -1,6 +1,7 @@
 package edu.cmu.cs.cs214.rec04;
 
 import static org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -36,6 +37,13 @@ public class DelegationSortedIntListTest {
         assertEquals(2, list1.get(2));
         assertEquals(3, list1.get(3));
         assertEquals(4, list1.get(4));
+
+        list2.add(3);
+        list2.add(4);
+        list1.removeAll(list2);
+
+        assertEquals(3, list1.size());
+        assertEquals(5, list1.getTotalAdded());
     }
 
     @Test
@@ -74,16 +82,13 @@ public class DelegationSortedIntListTest {
 
         assertEquals(3, list1.size());
 
-        list1.remove(1);
+        list1.remove(5);
         assertEquals(2, list1.size());
 
         assertEquals(3, list1.get(0));
         assertEquals(7, list1.get(1));
     }
 
-    /**
-     * Test for the removeAll() method.
-     */
     @Test
     public void testRemoveAll() {
         list1.add(1);

@@ -31,7 +31,6 @@ public class InheritanceSortedIntListTest {
 
         assertEquals(5, list1.getTotalAdded());
 
-        // Check sorted order
         assertEquals(1, list1.get(0));
         assertEquals(2, list1.get(1));
         assertEquals(2, list1.get(2));
@@ -58,7 +57,6 @@ public class InheritanceSortedIntListTest {
 
         assertEquals(7, list2.getTotalAdded());
 
-        // Check sorted order
         assertEquals(0, list2.get(0));
         assertEquals(1, list2.get(1));
         assertEquals(2, list2.get(2));
